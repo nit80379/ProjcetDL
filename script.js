@@ -23,8 +23,8 @@
     let isBg1Showing = true;
 
     // Initialize first two backgrounds
-    bg1.style.backgroundImage = 'url("' + imageUrls[currentIndex] + '")';
-    bg2.style.backgroundImage = 'url("' + imageUrls[nextIndex] + '")';
+    bg1.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("' + imageUrls[currentIndex] + '")';
+    bg2.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("' + imageUrls[nextIndex] + '")';
 
     function swapBackground() {
         const showingEl = isBg1Showing ? bg1 : bg2;
@@ -35,7 +35,7 @@
         nextIndex = (currentIndex + 1) % imageUrls.length;
 
         // Prepare next image on the hidden layer
-        hiddenEl.style.backgroundImage = 'url("' + imageUrls[nextIndex] + '")';
+        hiddenEl.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("' + imageUrls[nextIndex] + '")';
 
         // Crossfade: reveal hidden, hide showing
         hiddenEl.classList.remove('hidden');
