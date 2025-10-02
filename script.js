@@ -1,5 +1,5 @@
 (function () {
-    const INTERVAL_MS = 6000; // 6 seconds
+    const INTERVAL_MS = 10000; // 6 seconds
 
     const imageUrls = [
         'images/C1.png',
